@@ -1,0 +1,46 @@
+a {
+    text-decoration: none;
+    color: black;
+    padding: inherit;
+  }
+  
+  a.left {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    margin-left: 5px;
+    color: #222;
+  }
+  
+  .topbar{
+    padding: 6px;
+  }
+  
+  .topright {
+    padding: 5px;
+    margin: 0 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    float: right;
+  }
+
+.inputbar{
+  border: 1px solid #ccc !important;
+  border-radius: 16px;
+}
+
+  body, input, button {
+      font-size: 14px;
+      font-family: arial,sans-serif;
+      color: #222;
+  }
+
+.middle{
+  text-align: center;
+  padding-top: 150px;
+}
+
+.inputbar{
+  width: 500px;
+  padding: 5px;
+}
