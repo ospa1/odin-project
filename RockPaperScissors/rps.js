@@ -1,5 +1,6 @@
 
 const values = ["rock", "paper", "scissors"];
+
 function computerPlay(){
     const cpuVal = Math.floor(Math.random() * 3);
     return values[cpuVal];
@@ -27,18 +28,7 @@ function playRound(playerSelect,cpuSelect){
     }
 }
 
-function scoreResult(result, playerScore, cpuScore){
-
-    if(result == 2){
-        playerScore++;
-        cpuScore++;
-    }
-    else if(result == 1){
-        playerScore++;
-    }
-    else{
-        cpuScore++;
-    }
+function scoreResult(playerScore, cpuScore){
 
     if(playerScore == 3 && cpuScore == 3){
         console.log("Game is a Tie!");
@@ -58,14 +48,26 @@ function scoreResult(result, playerScore, cpuScore){
 }
 
 function game(){
-
+    
     let playerScore = 0;
     let cpuScore = 0;
     let round = 0;
 
     while(round < 5){
         let result = playRound(playerSelection(),computerPlay());
-        let gameEnd = scoreResult(result, playerScore, cpuScore);
+
+        if(result == 2){
+            playerScore++;
+            cpuScore++;
+        }
+        else if(result == 1){
+            playerScore++;
+        }
+        else{
+            cpuScore++;
+        }
+
+        let gameEnd = scoreResult(playerScore, cpuScore);
         if(gameEnd) break;
         round++;
     }
